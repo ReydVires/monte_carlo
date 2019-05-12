@@ -13,7 +13,7 @@ def calculate_i(w, data_tab):
     return _sum
 
 
-data = genfromtxt('Mosi200Data.csv', delimiter='')
+data = genfromtxt('RandUnif.csv', delimiter='')
 btm = 2
 top = 4
 N = len(data)
