@@ -1,5 +1,6 @@
 from numpy import genfromtxt
 import math
+import numpy as np
 
 
 def f(x):
@@ -21,4 +22,12 @@ weight = (top - btm) / N
 
 # partition
 i_value = calculate_i(weight, data)
-print(f'nilai weight: {weight}\nNilai I yang diperoleh: {i_value}')
+print(f'Weight: {weight}, I: {i_value}')
+
+# w = np.random.uniform(2, 4, 200)
+# print(w)
+# w.tofile('RandUnif.csv', '\n', '%s')
+
+# r = np.random.normal(0.5, math.sqrt(0.5), 200)
+# print(r)
+# r.tofile('RandDist.csv', '\n', '%s')

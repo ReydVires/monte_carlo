@@ -1,5 +1,6 @@
 from numpy import genfromtxt
 import math
+from scipy.stats import norm
 
 
 def f(x):
@@ -24,9 +25,8 @@ data = genfromtxt('RandUnif.csv', delimiter='')
 btm = 2
 top = 4
 N = len(data)
-mean = 0.5
-variance = 0.5
-k = 1.663087154  # prob: 0.95, mean: 0.5, variance: 0.5 (in std: 0.7071..)
+prob = 0.95
+k = norm.ppf(prob)
 
 f_aksen = fa(data, N)
 # print("f':", f_aksen)
