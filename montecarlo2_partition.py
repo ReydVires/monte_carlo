@@ -22,7 +22,7 @@ weight = (top - btm) / N
 
 # partition
 i_value = calculate_i(weight, data)
-print(f'Weight: {weight}, I: {i_value}')
+print(f'Hasil partisi: {i_value}')
 
 # w = np.random.uniform(2, 4, 200)
 # print(w)

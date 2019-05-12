@@ -41,4 +41,4 @@ Vf_aksen = Vf/N
 lower = (top - btm) * (f_aksen - (k * Vf_aksen))
 upper = (top - btm) * (f_aksen + (k * Vf_aksen))
 
-print(f'Nilai dari mean-variance lower: {lower} dan upper: {upper}')
+print(f'Hasil mean-variance\n[{lower}, {upper}]')
