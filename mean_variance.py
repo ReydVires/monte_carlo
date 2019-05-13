@@ -53,11 +53,11 @@ Vf = calculate_vf(data, f_aksen, N)
 Vf_aksen = Vf/N
 # print("Vf':", Vf_aksen)
 
-# mean-variance
+# mean-variance A
 lower = (top - btm) * (f_aksen - (k * Vf_aksen))
 upper = (top - btm) * (f_aksen + (k * Vf_aksen))
 
-print(f'Hasil mean-variance bag. A\n[{lower}, {upper}]')
+print(f'Hasil mean-variance (uniform) bag. A\n[{lower}, {upper}]')
 
 data = genfromtxt('RandDist.csv', delimiter='')
 btm = get_min(data)
@@ -65,7 +65,9 @@ top = get_max(data)
 f_aksen = fa(data, N)
 Vf = calculate_vf(data, f_aksen, N)
 Vf_aksen = Vf / N
+
+# mean-variance B
 lower = (top - btm) * (f_aksen - (k * Vf_aksen))
 upper = (top - btm) * (f_aksen + (k * Vf_aksen))
 
-print(f'Hasil mean-variance bag. B\n[{lower}, {upper}]')
+print(f'Hasil mean-variance (normal) bag. B\n[{lower}, {upper}]')

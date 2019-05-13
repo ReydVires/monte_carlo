@@ -1,6 +1,6 @@
 from numpy import genfromtxt
 import math
-# import numpy as np
+import numpy as np
 
 
 def get_min(tab):
@@ -37,22 +37,24 @@ weight = (top - btm) / N
 
 # partition A
 i_value = calculate_i(weight, data)
-print(f'Hasil partisi random uniform bag. A: {i_value}')
+print(f'Hasil partisi random (uniform) bag. A: {i_value}')
 
 data = genfromtxt('RandDist.csv', delimiter='')
 btm = get_min(data)
 top = get_max(data)
 weight = (top - btm) / N
-print(btm, top, weight)
+print(f"btm: {btm}, top: {top}, weight: {weight}")
 
 # partition B
 i_value = calculate_i(weight, data)
-print(f'Hasil partisi random uniform bag. B: {i_value}')
+print(f'Hasil partisi random (normal) bag. B: {i_value}')
 
+# generate random uniform
 # w = np.random.uniform(2, 4, 200)
 # print(w)
 # w.tofile('RandUnif.csv', '\n', '%s')
 
-# r = np.random.normal(0.5, math.sqrt(0.5), 200)
+# generate random normal
+# r = np.random.normal(0.5, 0.5, 200)
 # print(r)
 # r.tofile('RandDist.csv', '\n', '%s')
